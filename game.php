@@ -66,7 +66,7 @@ function makeCard(): array
  * @return string win/loss text
  * Takes 2 scores and determines the winner
  */
-function whoWins( int $score1, int $score2): string
+function whoWins(int $score1, int $score2): string
 {
     switch ($score1) {
         case $score1 > 21 && $score2 <= 21;
@@ -122,20 +122,16 @@ while (checkDupes($firstCardArray, $secondCardArray, $foeCardArray, $foeSecondCa
     $foeCardArray = makeCard();
     $foeSecondCardArray = makeCard();
 }
-$firstScore = getScore($firstCardArray);
-$secondScore = getScore($secondCardArray);
-$totalScore = $firstScore + $secondScore;
-$foeCardScore = getScore($foeCardArray);
-$foeSecondCardScore = getScore($foeSecondCardArray);
-$foeTotalScore = $foeCardScore + $foeSecondCardScore;
+$totalScore = getScore($firstCardArray) + getScore($secondCardArray);
+$foeTotalScore = getScore($foeCardArray) + getScore($foeSecondCardArray);
 
 
-echo 'You have the ' . implode(' of ', $firstCardArray) . '. That is worth ' . $firstScore . '<br>';
-echo 'You also have the ' . implode(' of ', $secondCardArray) . ' which is worth ' . $secondScore . '<br>';
+echo 'You have the ' . implode(' of ', $firstCardArray) . '<br>';
+echo 'You also have the ' . implode(' of ', $secondCardArray) . '<br>';
 echo 'So in total that\'s ' . $totalScore;
 echo '<br>';
-echo 'Your opponent has the ' . implode(' of ', $foeCardArray) . ' That is worth ' . $foeCardScore . '<br>';
-echo 'Your opponent also has the ' . implode(' of ', $foeSecondCardArray) . ' That is worth ' . $foeSecondCardScore . '<br>';
+echo 'Your opponent has the ' . implode(' of ', $foeCardArray) . '<br>';
+echo 'Your opponent also has the ' . implode(' of ', $foeSecondCardArray) . '<br>';
 echo 'So in total that\'s ' . $foeTotalScore . '<br>';
 echo whoWins($totalScore, $foeTotalScore);
 
