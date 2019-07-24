@@ -8,6 +8,7 @@
     height: 700px;
     width: 1200px;
     position: relative;
+    margin:0 auto;
 }
 
 p {
@@ -18,31 +19,64 @@ h1 {
     color: white;
     font-size: 70px;
     text-align: center;
+    margin: 0;
 }
-
+h2{
+    color: white;
+    text-align: center;
+    font-size: 30px;
+}
+.left-box{
+    overflow: auto;
+    float: left;
+    height:500px;
+}
+.right-box{
+    overflow: auto;
+    float: right;
+    height:500px;
+}
 .player1-container {
-    border: 1px solid blue;
     height: 400px;
     width: 500px;
     float: left;
-    margin-left: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center
 }
 
 .player2-container {
-    border: 1px solid blue;
     height: 400px;
     width: 500px;
     float: right;
-    margin-right: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center
 }
 
 .results-container {
     width: 1000px;
     height: 100px;
-    border: solid 1px blue;
     position: absolute;
     bottom: 0;
     left: 100px;
-
-
+    display: flex;
+    justify-content: center;
+}
+.card{
+    height: 300px;
+    width: 200px;
+    background-color: white;
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-value{
+    font-size: 20px;
+    color: darkred;
+}
+.result{
+    font-size: 50px;
+    color: white;
 }

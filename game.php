@@ -125,13 +125,3 @@ while (checkDupes($firstCardArray, $secondCardArray, $foeCardArray, $foeSecondCa
 $totalScore = getScore($firstCardArray) + getScore($secondCardArray);
 $foeTotalScore = getScore($foeCardArray) + getScore($foeSecondCardArray);
 
-
-echo 'You have the ' . implode(' of ', $firstCardArray) . '<br>';
-echo 'You also have the ' . implode(' of ', $secondCardArray) . '<br>';
-echo 'So in total that\'s ' . $totalScore;
-echo '<br>';
-echo 'Your opponent has the ' . implode(' of ', $foeCardArray) . '<br>';
-echo 'Your opponent also has the ' . implode(' of ', $foeSecondCardArray) . '<br>';
-echo 'So in total that\'s ' . $foeTotalScore . '<br>';
-echo whoWins($totalScore, $foeTotalScore);
-
