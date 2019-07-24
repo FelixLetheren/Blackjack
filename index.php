@@ -54,6 +54,31 @@ function makeCard(): array
     return array(getCardNumber($cardNumbers), getSuit($suits));
 
 }
+function whoWins($score1, $score2)
+{
+    switch ($score1) {
+        case $score1 >= 21 && $score2 < 21;
+            return 'Bust! You Loose!';
+            break;
+        case $score1 < 21 && $score2 >= 21;
+            return 'Bust! You Win!';
+            break;
+        case $score1 >= 21 && $score2 >= 21;
+            return 'You\'re both bust! Draw!';
+            break;
+        case $score1 > $score2;
+            return 'You win!';
+            break;
+        case $score1 < $score2;
+            return 'You loose!';
+        case $score1 === $score2;
+            return 'Draw!';
+        default;
+            return 'error';
+            break;
+
+    }
+}
 
 $firstCardArray = makeCard();
 $firstScore = getScore($firstCardArray);
@@ -73,5 +98,5 @@ echo 'So in total that\'s ' .$totalScore;
 echo '<br>';
 echo 'Your opponent has the ' .implode(' of ', $foeCardArray). ' That is worth ' .$foeCardScore. '<br>';
 echo 'Your opponent also has the ' .implode( ' of ', $foeSecondCardArray). ' That is worth ' .$foeSecondCardScore. '<br>';
-echo 'So in total that\'s' .$foeTotalScore;
-
+echo 'So in total that\'s' .$foeTotalScore.'<br>';
+echo whoWins($totalScore, $foeTotalScore);
