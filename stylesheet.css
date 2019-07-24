@@ -29,12 +29,12 @@ h2{
 .left-box{
     overflow: auto;
     float: left;
-    height:500px;
+    height:700px;
 }
 .right-box{
     overflow: auto;
     float: right;
-    height:500px;
+    height:700px;
 }
 .player1-container {
     height: 400px;
@@ -68,13 +68,25 @@ h2{
     width: 200px;
     background-color: white;
     border-radius: 10%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
+    text-align: center;
 }
-.card-value{
+.card-number{
     font-size: 20px;
     color: darkred;
+    float: left;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+
+}
+.card-suit{
+    font-size: 50px;
+    color: darkred;
+    float: right;
+    margin-right: 10px;
 }
 .result{
     font-size: 50px;

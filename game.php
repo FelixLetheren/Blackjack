@@ -35,10 +35,10 @@ function getScore(array $card): int
             case is_integer($data):
                 return $data;
                 break;
-            case strpos($data, 'Ace') !== false:
+            case strpos($data, 'A') !== false:
                 return 11;
                 break;
-            case strpos($data, 'King') !== false || strpos($data, 'Queen') !== false || strpos($data, 'Jack') !== false:
+            case strpos($data, 'K') !== false || strpos($data, 'Q') !== false || strpos($data, 'J') !== false:
                 return 10;
                 break;
             default:
@@ -54,8 +54,8 @@ function getScore(array $card): int
  */
 function makeCard(): array
 {
-    $suits = ['clubs', 'hearts', 'spades', 'diamonds'];
-    $cardNumbers = ['Ace', 2, 3, 4, 5, 6, 7, 8, 9, 10, 'Jack', 'Queen', 'King'];
+    $suits = ['♣ ', '♥', '♠', '♦'];
+    $cardNumbers = ['A', 2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K'];
     return array(getCardNumber($cardNumbers), getSuit($suits));
 
 }
@@ -70,19 +70,19 @@ function whoWins(int $score1, int $score2): string
 {
     switch ($score1) {
         case $score1 > 21 && $score2 <= 21;
-            return 'Bust! You Loose!';
+            return 'Bust! Player 2 Wins!';
             break;
         case $score1 <= 21 && $score2 > 21;
-            return 'Bust! You Win!';
+            return 'Bust! Player 1 Wins!';
             break;
         case $score1 > 21 && $score2 > 21;
             return 'You\'re both bust! Draw!';
             break;
         case $score1 > $score2;
-            return 'You win!';
+            return 'Player 1 Wins!';
             break;
         case $score1 < $score2;
-            return 'You loose!';
+            return 'Player 2 Wins!';
         case $score1 === $score2;
             return 'Draw!';
         default;
