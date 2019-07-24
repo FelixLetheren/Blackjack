@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+    font-family: "Helvetica Neue", sans-serif;
+}
+
+.container {
+    background-image: url("felt-table.jpg");
+    height: 700px;
+    width: 1200px;
+    position: relative;
+}
+
+p {
+    font-size: 2rem;
+}
+
+h1 {
+    color: white;
+    font-size: 70px;
+    text-align: center;
+}
+
+.player1-container {
+    border: 1px solid blue;
+    height: 400px;
+    width: 500px;
+    float: left;
+    margin-left: 50px;
+}
+
+.player2-container {
+    border: 1px solid blue;
+    height: 400px;
+    width: 500px;
+    float: right;
+    margin-right: 50px;
+}
+
+.results-container {
+    width: 1000px;
+    height: 100px;
+    border: solid 1px blue;
+    position: absolute;
+    bottom: 0;
+    left: 100px;
+
+
+}
