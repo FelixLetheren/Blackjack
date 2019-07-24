@@ -13,10 +13,10 @@
         <h2>Player 1</h2>
         <div class="player1-container">
             <div class="card">
-                <?php echo '<span class="card-number">' . implode('</span><span class="card-suit">', $firstCardArray) . '</span>' ?>
+                <?php echo '<span class="card-number">' . implode('</span><span class="', $firstCardArray) . '"></span>' ?>
             </div>
             <div class="card">
-                <?php echo '<span class="card-number">' . implode('</span><span class="card-suit">', $secondCardArray) . '</span>' ?>
+                <?php echo '<span class="card-number">' . implode('</span><span class="', $secondCardArray) . '"></span>' ?>
             </div>
         </div>
         <?php echo '<h2>Score: ' .$totalScore. '</h2>' ?>
@@ -25,10 +25,10 @@
         <h2>Player 2</h2>
         <div class="player2-container">
             <div class="card">
-                <?php echo '<span class="card-number">' . implode('</span><span class="card-suit">', $foeCardArray) . '</span>' ?>
+                <?php echo '<span class="card-number">' . implode('</span><span class="', $foeCardArray) . '"></span>' ?>
             </div>
             <div class="card">
-                <?php echo '<span class="card-number">' . implode('</span><span class="card-suit">', $foeSecondCardArray) . '</span>' ?>
+                <?php echo '<span class="card-number">' . implode('</span><span class="', $foeSecondCardArray) . '"></span>' ?>
             </div>
         </div>
         <?php echo '<h2>Score: ' .$foeTotalScore. '</h2>' ?>

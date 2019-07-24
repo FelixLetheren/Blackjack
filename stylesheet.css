@@ -82,6 +82,34 @@ h2{
     font-size: 50px;
 
 }
+.♥::before{
+    font-size: 50px;
+    color: darkred;
+    float: right;
+    margin-right: 10px;
+    content: "♥";
+}
+.♦::before{
+    font-size: 50px;
+    color: darkred;
+    float: right;
+    margin-right: 10px;
+    content: "♦";
+}
+.♠::before{
+    font-size: 50px;
+    color: black;
+    float: right;
+    margin-right: 10px;
+    content: "♠";
+}
+.♣::before{
+    font-size: 50px;
+    color: black;
+    float: right;
+    margin-right: 10px;
+    content: "♣";
+}
 .card-suit{
     font-size: 50px;
     color: darkred;
