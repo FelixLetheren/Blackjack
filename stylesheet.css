@@ -8,7 +8,7 @@
     height: 700px;
     width: 1200px;
     position: relative;
-    margin:0 auto;
+    margin: 0 auto;
 }
 
 p {
@@ -21,21 +21,25 @@ h1 {
     text-align: center;
     margin: 0;
 }
-h2{
+
+h2 {
     color: white;
     text-align: center;
     font-size: 30px;
 }
-.left-box{
+
+.left-box {
     overflow: auto;
     float: left;
-    height:700px;
+    height: 700px;
 }
-.right-box{
+
+.right-box {
     overflow: auto;
     float: right;
-    height:700px;
+    height: 700px;
 }
+
 .player1-container {
     height: 400px;
     width: 500px;
@@ -63,7 +67,8 @@ h2{
     display: flex;
     justify-content: center;
 }
-.card{
+
+.card {
     height: 300px;
     width: 200px;
     background-color: white;
@@ -71,52 +76,100 @@ h2{
     position: relative;
     text-align: center;
 }
-.card-number{
+
+.card-number {
     font-size: 20px;
     color: darkred;
     float: left;
     position: absolute;
-    top:50%;
-    left:50%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     font-size: 50px;
 
 }
-.♥::before{
+
+.♥::before {
     font-size: 50px;
     color: darkred;
-    float: right;
-    margin-right: 10px;
+    float: left;
     content: "♥";
+    position: absolute;
+    top: 5px;
+    left: 20px;
 }
-.♦::before{
+
+.♥::after {
     font-size: 50px;
     color: darkred;
     float: right;
-    margin-right: 10px;
+    content: "♥";
+    position: absolute;
+    bottom: 5px;
+    right: 20px;
+}
+
+.♦::before {
+    font-size: 50px;
+    color: darkred;
+    float: left;
     content: "♦";
+    position: absolute;
+    top: 5px;
+    left: 20px;
 }
-.♠::before{
-    font-size: 50px;
-    color: black;
-    float: right;
-    margin-right: 10px;
-    content: "♠";
-}
-.♣::before{
-    font-size: 50px;
-    color: black;
-    float: right;
-    margin-right: 10px;
-    content: "♣";
-}
-.card-suit{
+
+.♦::after {
     font-size: 50px;
     color: darkred;
     float: right;
-    margin-right: 10px;
+    content: "♦";
+    position: absolute;
+    bottom: 5px;
+    right: 20px;
 }
-.result{
+
+.♠::before {
+    font-size: 50px;
+    color: black;
+    float: left;
+    content: "♠";
+    position: absolute;
+    top: 5px;
+    left: 20px;
+}
+
+.♠::after {
+    font-size: 50px;
+    color: black;
+    float: right;
+    content: "♠";
+    position: absolute;
+    bottom: 5px;
+    right: 20px;
+}
+
+.♣::before {
+    font-size: 50px;
+    color: black;
+    float: left;
+    content: "♣";
+    position: absolute;
+    top: 5px;
+    left: 20px;
+}
+
+.♣::after {
+    font-size: 50px;
+    color: black;
+    float: right;
+    content: "♣";
+    position: absolute;
+    bottom: 5px;
+    right: 20px;
+}
+
+.result {
     font-size: 50px;
     color: white;
 }

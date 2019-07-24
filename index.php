@@ -8,7 +8,7 @@
 </head>
 <body>
 <div class="container">
-    <h1>Blackjack for Nerds</h1>
+    <h1>Blackjack</h1>
     <div class="left-box">
         <h2>Player 1</h2>
         <div class="player1-container">
